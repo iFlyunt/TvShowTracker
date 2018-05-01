@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8.0.162-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ippt.controller.RegistrationView">
+   <children>
+      <Label layoutX="134.0" layoutY="135.0" text="First name:" />
+      <Label layoutX="135.0" layoutY="174.0" text="Last name:" />
+      <Label layoutX="134.0" layoutY="216.0" text="Username:" />
+      <Label layoutX="137.0" layoutY="259.0" text="Password:" />
+      <JFXTextField fx:id="firstNameInput" layoutX="212.0" layoutY="121.0" prefHeight="28.0" prefWidth="194.0" />
+      <JFXTextField fx:id="lastNameInput" layoutX="212.0" layoutY="163.0" prefWidth="194.0" />
+      <JFXTextField fx:id="passwordInput" layoutX="212.0" layoutY="247.0" prefWidth="194.0" />
+      <JFXTextField fx:id="usernameInput" layoutX="212.0" layoutY="205.0" prefWidth="194.0" />
+      <JFXButton layoutX="342.0" layoutY="305.0" onAction="#signUp" style="-fx-background-color: #fff;" text="Sign up" />
+   </children>
+</AnchorPane>
