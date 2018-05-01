@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.ippt</groupId>
+		<groupId>com.tvshowtracker</groupId>
 		<artifactId>tv_show_tracker</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
