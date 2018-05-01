@@ -111,14 +111,12 @@ public class TvShowController {
         Subscriber user = getSubscriber();
         final List<TvShow> shows = showService.findRunningShowsByUserId(user.getId());
         List<UpcomingEpisodeResponse> upcomingEpisodeResponses = new ArrayList<>();
-        System.out.println("upcoming");
         shows.forEach(s -> createUpcomingEpisodeResponse(s).ifPresent(upcomingEpisodeResponses::add));
         return ResponseEntity.status(HttpStatus.OK).body(upcomingEpisodeResponses);
     }
 
     private Optional<UpcomingEpisodeResponse> createUpcomingEpisodeResponse(TvShow tvShow) {
         final Optional<TvShowEpisode> ue = tvEpisodeService.findUpcomingEpisode(tvShow.getId());
-        System.out.println(ue.isPresent());
         return ue.map(e -> {
             UpcomingEpisodeResponse upcomingEpisodeResponse = UpcomingEpisodeResponse.toResponse(e);
             upcomingEpisodeResponse.setShowPoster(tvShow.getPosterUrl());

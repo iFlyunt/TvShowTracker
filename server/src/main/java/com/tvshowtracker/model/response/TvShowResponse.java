@@ -19,8 +19,6 @@ public class TvShowResponse {
     private String    status;
     private boolean   subscribed;
 
-    public TvShowResponse() {}
-
     private TvShowResponse(TvShow tvShow) {
         this.setId(tvShow.getId());
         this.setName(tvShow.getName());

@@ -70,7 +70,6 @@ public class TvShowServiceImpl extends AbstractService<TvShow, Long, TvShowRepos
         tvShow.setAirsDayOfWeek(tvDbSeries.getAirsDayOfWeek());
         tvShow.setAirsTime(tvDbSeries.getAirsTime().orElse(null));
         tvShow.setNetwork(tvDbSeries.getNetwork());
-        System.out.println(tvDbId);
         tvShow.setPosterUrl(tvDb.getLatestSeriesPoster(tvDbId));
         tvShow.setStatus(tvDbSeries.getStatus());
         return tvShow;
